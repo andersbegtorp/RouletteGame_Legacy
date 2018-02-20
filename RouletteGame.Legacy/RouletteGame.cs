@@ -5,13 +5,13 @@ namespace RouletteGame.Legacy
 {
     public class RouletteGame
     {
-        private readonly List<Bet> _bets;
+        private readonly List<IBet> _bets;
         private readonly Roulette _roulette;
         private bool _roundIsOpen;
 
         public RouletteGame(Roulette roulette)
         {
-            _bets = new List<Bet>();
+            _bets = new List<IBet>();
             _roulette = roulette;
         }
 

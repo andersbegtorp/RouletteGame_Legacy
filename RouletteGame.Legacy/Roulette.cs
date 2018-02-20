@@ -3,13 +3,16 @@ using System.Collections.Generic;
 
 namespace RouletteGame.Legacy
 {
-    public class Roulette
+    public class Roulette : IRoulette
     {
         private readonly List<Field> _fields;
         private Field _result;
+        private IRouletteNumberGenerator _rouletteNumberGenerator;
 
-        public Roulette()
+        public Roulette(IRouletteNumberGenerator rouletteNumberGenerator)
         {
+            _rouletteNumberGenerator = rouletteNumberGenerator;
+
             _fields = new List<Field>
             {
                 new Field(0, Field.Green),
@@ -56,13 +59,31 @@ namespace RouletteGame.Legacy
 
         public void Spin()
         {
-            var n = (uint) new Random().Next(0, 37);
-            _result = _fields[(int) n];
+            _result = _fields[(int) _rouletteNumberGenerator.GetNumber()];
         }
 
         public Field GetResult()
         {
             return _result;
+        }
+    }
+
+    public interface IRoulette
+    {
+        void Spin();
+        Field GetResult();
+    }
+
+    public interface IRouletteNumberGenerator
+    {
+        uint GetNumber();
+    }
+
+    public class RouletteNumberGenerator : IRouletteNumberGenerator
+    {
+        public uint GetNumber()
+        {
+            return (uint)new Random().Next(0, 37);
         }
     }
 }

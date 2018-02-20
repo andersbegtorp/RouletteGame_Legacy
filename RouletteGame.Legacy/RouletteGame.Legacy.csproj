@@ -42,7 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bet.cs" />
+    <Compile Include="ColorBet.cs" />
+    <Compile Include="EvenOddBet.cs" />
     <Compile Include="Field.cs" />
+    <Compile Include="FieldBet.cs" />
+    <Compile Include="FieldException.cs" />
+    <Compile Include="IBet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roulette.cs" />
     <Compile Include="RouletteGame.cs" />

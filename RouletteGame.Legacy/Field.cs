@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace RouletteGame.Legacy
+﻿namespace RouletteGame.Legacy
 {
-    public class Field
+    public class Field 
     {
         public const uint Red = 0;
         public const uint Black = 1;
@@ -62,10 +60,4 @@ namespace RouletteGame.Legacy
         }
     }
 
-    public class FieldException : Exception
-    {
-        public FieldException(string s) : base(s)
-        {
-        }
-    }
 }
