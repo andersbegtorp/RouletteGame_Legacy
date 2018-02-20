@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace RouletteGame.Legacy
 {
@@ -65,25 +64,6 @@ namespace RouletteGame.Legacy
         public Field GetResult()
         {
             return _result;
-        }
-    }
-
-    public interface IRoulette
-    {
-        void Spin();
-        Field GetResult();
-    }
-
-    public interface IRouletteNumberGenerator
-    {
-        uint GetNumber();
-    }
-
-    public class RouletteNumberGenerator : IRouletteNumberGenerator
-    {
-        public uint GetNumber()
-        {
-            return (uint)new Random().Next(0, 37);
         }
     }
 }

@@ -1,29 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace RouletteGame.Legacy
 {
     public class RouletteGame
     {
         private readonly List<IBet> _bets;
-        private readonly Roulette _roulette;
+        private readonly IRoulette _roulette;
+        private IConsoleWriter _consoleWriter;
+        
         private bool _roundIsOpen;
 
-        public RouletteGame(Roulette roulette)
+        public RouletteGame(IRoulette roulette, IConsoleWriter consoleWriter)
         {
             _bets = new List<IBet>();
+            _consoleWriter = consoleWriter;
             _roulette = roulette;
         }
 
         public void OpenBets()
         {
-            Console.WriteLine("Round is open for bets");
+            _consoleWriter.WriteString("Round is open for bets");
             _roundIsOpen = true;
         }
 
         public void CloseBets()
         {
-            Console.WriteLine("Round is closed for bets");
+            _consoleWriter.WriteString("Round is closed for bets");
             _roundIsOpen = false;
         }
 
@@ -35,9 +37,11 @@ namespace RouletteGame.Legacy
 
         public void SpinRoulette()
         {
-            Console.Write("Spinning...");
+            _consoleWriter.WriteString("Spinning...");
             _roulette.Spin();
-            Console.WriteLine("Result: {0}", _roulette.GetResult());
+
+            string s = "Result: " + _roulette.GetResult();
+            _consoleWriter.WriteString(s);
         }
 
         public void PayUp()
@@ -48,15 +52,12 @@ namespace RouletteGame.Legacy
             {
                 var won = bet.WonAmount(result);
                 if (won > 0)
-                    Console.WriteLine("{0} just won {1}$ on a {2}", bet.PlayerName, won, bet);
+                {
+                    string s = bet.PlayerName + " just won " + won + "$ on a " + bet;
+                    _consoleWriter.WriteString(s);
+                }
+                 
             }
-        }
-    }
-
-    public class RouletteGameException : Exception
-    {
-        public RouletteGameException(string s) : base(s)
-        {
         }
     }
 }

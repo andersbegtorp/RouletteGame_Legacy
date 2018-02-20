@@ -43,15 +43,21 @@
   <ItemGroup>
     <Compile Include="Bet.cs" />
     <Compile Include="ColorBet.cs" />
+    <Compile Include="ConsoleWriter.cs" />
     <Compile Include="EvenOddBet.cs" />
     <Compile Include="Field.cs" />
     <Compile Include="FieldBet.cs" />
     <Compile Include="FieldException.cs" />
     <Compile Include="IBet.cs" />
+    <Compile Include="IConsoleWriter.cs" />
+    <Compile Include="IRoulette.cs" />
+    <Compile Include="IRouletteNumberGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Roulette.cs" />
     <Compile Include="RouletteGame.cs" />
+    <Compile Include="RouletteGameException.cs" />
     <Compile Include="RouletteGameTestApplication.cs" />
+    <Compile Include="RouletteNumberGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
