@@ -48,8 +48,10 @@
     <Compile Include="Field.cs" />
     <Compile Include="FieldBet.cs" />
     <Compile Include="FieldException.cs" />
+    <Compile Include="FieldFactory.cs" />
     <Compile Include="IBet.cs" />
     <Compile Include="IConsoleWriter.cs" />
+    <Compile Include="IFieldFactory.cs" />
     <Compile Include="IRoulette.cs" />
     <Compile Include="IRouletteNumberGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
