@@ -54,6 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorFieldTestUnit.cs" />
+    <Compile Include="EvenOddBetTestUnit.cs" />
+    <Compile Include="FieldBetTest.cs" />
     <Compile Include="FieldTestUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
