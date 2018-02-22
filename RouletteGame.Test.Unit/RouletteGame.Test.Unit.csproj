@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="FieldTestUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RouletteTestUnit.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RouletteGame.Legacy\RouletteGame.Legacy.csproj">
