@@ -16,7 +16,7 @@ namespace RouletteGame.Test.Unit
     {
         private EvenOddBet _uut;
 
-        [TestCase("Anders", (uint)500,(bool)true,(uint)1000)]
+        [TestCase("Anders", (uint)200,(bool)true,(uint)400)]
         [TestCase("Anders", (uint)5000, (bool)true, (uint)10000)]
         [TestCase("Anders", (uint)1, (bool)true, (uint)2)]
         public void WonAmount_EvenChosen_CorrectAmount(string name, uint amount, bool even, uint expectedReturn)
