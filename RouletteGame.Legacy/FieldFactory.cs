@@ -9,6 +9,7 @@ namespace RouletteGame.Legacy
 {
     public class FieldFactory : IFieldFactory
     {
+        
         public List<Field> CreateFields(string type)
         {
             if (type == "USA")
@@ -55,7 +56,7 @@ namespace RouletteGame.Legacy
                 };
                 return _fields;
             }
-            else throw new Exception("");
+            else throw new Exception("Wrong type of roulette");
 
         }
     }
