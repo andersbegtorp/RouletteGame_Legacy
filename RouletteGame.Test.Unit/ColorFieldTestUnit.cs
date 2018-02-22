@@ -27,6 +27,14 @@ namespace RouletteGame.Test.Unit
 
             Assert.That(_uut.WonAmount(new Field(2,color)),Is.EqualTo(expectedReturn));
         }
+
+        [TestCase("Anders", (uint)500, (uint)1, "black")]
+        public void ToString_ReturnColor_ColorIsCorrect(string name, uint amount, uint color, string expectedReturn)
+        {
+            _uut = new ColorBet(name, amount, color);
+
+            Assert.That(_uut.ToString(),Is.EqualTo(amount+ "$ color bet on " + expectedReturn));
+        }
     }
 }
 
