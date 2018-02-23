@@ -53,6 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorBetTestUnit.cs" />
+    <Compile Include="ColorFieldTestUnit.cs" />
+    <Compile Include="EvenOddBetTestUnit.cs" />
+    <Compile Include="FieldBetTest.cs" />
     <Compile Include="FieldFactoryTestUnit.cs" />
     <Compile Include="FieldTestUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
