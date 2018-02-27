@@ -10,7 +10,7 @@ using RouletteGame.Legacy;
 namespace RouletteGame.Test.Unit
 {
     [TestFixture]
-    public class FieldBetTest
+    public class FieldBetTestUnit
     {
         private FieldBet _uut;
 
