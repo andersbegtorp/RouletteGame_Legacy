@@ -41,25 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bet.cs" />
-    <Compile Include="ColorBet.cs" />
-    <Compile Include="ConsoleWriter.cs" />
-    <Compile Include="EvenOddBet.cs" />
-    <Compile Include="Field.cs" />
-    <Compile Include="FieldBet.cs" />
-    <Compile Include="FieldException.cs" />
-    <Compile Include="FieldFactory.cs" />
-    <Compile Include="IBet.cs" />
-    <Compile Include="IConsoleWriter.cs" />
-    <Compile Include="IFieldFactory.cs" />
-    <Compile Include="IRoulette.cs" />
-    <Compile Include="IRouletteNumberGenerator.cs" />
+    <Compile Include="Bet\Bet.cs" />
+    <Compile Include="Bet\ColorBet.cs" />
+    <Compile Include="ConsoleOutput\ConsoleWriter.cs" />
+    <Compile Include="Bet\EvenOddBet.cs" />
+    <Compile Include="Field\Field.cs" />
+    <Compile Include="Bet\FieldBet.cs" />
+    <Compile Include="Field\FieldException.cs" />
+    <Compile Include="Field\FieldFactory.cs" />
+    <Compile Include="Bet\IBet.cs" />
+    <Compile Include="ConsoleOutput\IConsoleWriter.cs" />
+    <Compile Include="Field\IFieldFactory.cs" />
+    <Compile Include="Roulette\IRoulette.cs" />
+    <Compile Include="RouletteNumberGeneration\IRouletteNumberGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Roulette.cs" />
-    <Compile Include="RouletteGame.cs" />
-    <Compile Include="RouletteGameException.cs" />
+    <Compile Include="Roulette\Roulette.cs" />
+    <Compile Include="RouletteGame\RouletteGame.cs" />
+    <Compile Include="RouletteGame\RouletteGameException.cs" />
     <Compile Include="RouletteGameTestApplication.cs" />
-    <Compile Include="RouletteNumberGenerator.cs" />
+    <Compile Include="RouletteNumberGeneration\RouletteNumberGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

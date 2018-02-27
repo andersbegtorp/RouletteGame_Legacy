@@ -11,7 +11,7 @@ namespace RouletteGame.Test.Unit
 {
     [TestFixture]
 
-    public class ColorFieldTestUnit
+    public class ColorBetTestUnit
     {
         private ColorBet _uut;
 
